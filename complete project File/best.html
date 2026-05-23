@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Earth</title>
+    <style>
+      .green {
+        background-color: #15803d;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Nav section -->
+    <header class="">
+      <nav>
+        <div class="navbar bg-base-100 shadow-sm bg-[#15803D] px-10">
+          <div class="navbar-start">
+            <a class="btn btn-ghost text-xl text-white">Green Earth</a>
+          </div>
+          <div class="navbar-center lg:flex text-white">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>About</a></li>
+              <li>
+                <summary>Gallery</summary>
+              </li>
+              <li><a>Plant a Tree</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="btn border-none shadow-none text-[#15803D] rounded-3xl bg-[#FACC15]"
+              >Plant a Tree</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ``````````````````````````banner section````````````````````````````````` -->
+    <section class="bg-[#CFF0DC]">
+      <div class="main-div flex justify-evenly pt-10 items-center">
+        <div><img src="./assets/hero-leaf1.png" alt="" /></div>
+        <div class="text-center space-y-5">
+          <h2 class="font-bold text-5xl">Plant a Tree, Grow a Future</h2>
+          <p class="">
+            Join our mission to plant 1 million trees and make the Earth greener
+            for future generations.
+          </p>
+          <button>
+            <a
+              class="btn border-none shadow-none text-[#15803D] rounded-3xl bg-[#FACC15]"
+              >Plant a Tree</a
+            >
+          </button>
+        </div>
+        <div><img src="./assets/hero-leaf2.png" alt="" /></div>
+      </div>
+    </section>
+    <!-- ``````````````````````````body  section````````````````````````````````` -->
+    <section class="flex my-10 px-10">
+      <!-- item-1 -->
+      <div class="categories-container w-1/6">
+        <h2 class="font-semibold text-2xl" onclick="">Categories</h2>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer my-1 pl-2 rounded-sm hover:text-white"
+          onclick="categoryClick('Fruit Tree')"
+        >
+          All Trees
+        </p>
+
+        <p
+          class="hover:bg-[#15803D] cursor-pointer my-1 pl-2 rounded-sm hover:text-white"
+          onclick="filterCategories('Flowering Tree')"
+        >
+          Flowering Tree
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer my-1 pl-2 rounded-sm hover:text-white"
+          onclick="filterCategories('Shade Tree')"
+        >
+          Shade Tree
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer my-1 pl-2 rounded-sm hover:text-white"
+          onclick="filterCategories('Medicinal Tree')"
+        >
+          Medicinal Tree
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer my-1 pl-2 rounded-sm hover:text-white"
+          onclick="filterCategories('Timber Tree')"
+        >
+          Timber Tree
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer my-1 pl-2 rounded-sm hover:text-white"
+          onclick="filterCategories('Evergreen Tree')"
+        >
+          Evergreen Tree
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer my-1 pl-2 rounded-sm hover:text-white"
+          onclick="filterCategories('Ornamental Plant')"
+        >
+          Ornamental Plant
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer my-1 pl-2 rounded-sm hover:text-white"
+          onclick="filterCategories('Ornamental Plant')"
+        >
+          Ornamental Plant
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer my-1 pl-2 rounded-sm hover:text-white"
+          onclick="filterCategories('Bamboo')"
+        >
+          Bamboo
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer my-1 pl-2 rounded-sm hover:text-white"
+          onclick="filterCategories('Climbers')"
+        >
+          Climbers
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer my-1 pl-2 rounded-sm hover:text-white"
+          onclick="filterCategories('Aquatic Plants')"
+        >
+          Aquatic Plants
+        </p>
+      </div>
+      <!-- //````````````````````modal```````````````````````````````// -->
+      <dialog id="my_modal_5" class="modal">
+        <div class="modal-box space-y-3">
+          <figure class="pt-4">
+            <img
+              src=""
+              alt="Shoes"
+              class="rounded-xl w-full h-48"
+              id="modal-image"
+            />
+          </figure>
+          <h3 id="modal-title" class="text-lg font-bold"></h3>
+          <h3 id="modal-price" class="text-lg font-bold"></h3>
+
+          <p id="modal-description" class="py-4"></p>
+
+          <div class="modal-action">
+            <form method="dialog">
+              <button class="btn border-0">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- //````````````````````item-2```````````````````````````````// -->
+      <div>
+        <div
+          class="card-container w-full grid grid-cols-3 gap-7 items-center"
+          id="categories-container"
+        >
+          <!-- card-1  -->
+        </div>
+        <section class="my-20 mx-auto">
+          <h1 class="font-semibold text-4xl text-center mb-10">
+            About the Campaign section
+          </h1>
+          <div class="flex space-x-5 items-center">
+            <div class="w-1/2"><img src=".//assets/about.png" alt="" /></div>
+            <div class="text-left w-1/2 text-[#1F2937]">
+              <p>
+                Green Earth is a global tree plantation initiative dedicated to
+                fighting climate change. Since our start, we’ve planted over
+                500,000 trees worldwide. By joining our campaign, you help
+                restore forests, create habitats for wildlife, and combat global
+                warming.
+              </p>
+              <br />
+              <ul>
+                <li>Restoration of natural habitats</li>
+                <li>Improvement of air quality</li>
+                <li>Support for local communities</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- //````````````````````item-3```````````````````````````````// -->
+
+      <div class="your-cart-container w-1/6 h-48">
+        <h3 class="font-bold">Your cart</h3>
+        <div id="your-cart-container"></div>
+        <div class="flex justify-between border-t border-t-gray-200">
+          <p>Total:</p>
+          <div class="flex items-center">
+            <p class="font-semibold text-xl">৳</p>
+            <p id="total-container"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section></section>
+    <script src="best.js"></script>
+  </body>
+</html>
