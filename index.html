@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green Earth</title>
+    <style>
+      .green {
+        background-color: #15803d;
+      }
+    </style>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -37,9 +42,7 @@
         </div>
       </nav>
     </header>
-
     <!-- ``````````````````````````banner section````````````````````````````````` -->
-
     <section class="bg-[#CFF0DC]">
       <div class="main-div flex justify-evenly pt-10 items-center">
         <div><img src="./assets/hero-leaf1.png" alt="" /></div>
@@ -59,5 +62,92 @@
         <div><img src="./assets/hero-leaf2.png" alt="" /></div>
       </div>
     </section>
+    <!-- ``````````````````````````body  section````````````````````````````````` -->
+    <section class="flex my-10 px-10">
+      <!-- item-1 -->
+      <div class="categories-container w-1/6">
+        <h2 class="font-semibold text-2xl" onclick="">Categories</h2>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer py-1 hover:text-white"
+          onclick="filterCategories('Fruit Tree')"
+        >
+          All Trees
+        </p>
+
+        <p
+          class="hover:bg-[#15803D] cursor-pointer py-1 hover:text-white"
+          onclick="filterCategories('Flowering Tree')"
+        >
+          Flowering Tree
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer py-1 hover:text-white"
+          onclick="filterCategories('Shade Tree')"
+        >
+          Shade Tree
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer py-1 hover:text-white"
+          onclick="filterCategories('Medicinal Tree')"
+        >
+          Medicinal Tree
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer py-1 hover:text-white"
+          onclick="filterCategories('Timber Tree')"
+        >
+          Timber Tree
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer py-1 hover:text-white"
+          onclick="filterCategories('Evergreen Tree')"
+        >
+          Evergreen Tree
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer py-1 hover:text-white"
+          onclick="filterCategories('Ornamental Plant')"
+        >
+          Ornamental Plant
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer py-1 hover:text-white"
+          onclick="filterCategories('Ornamental Plant')"
+        >
+          Ornamental Plant
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer py-1 hover:text-white"
+          onclick="filterCategories('Bamboo')"
+        >
+          Bamboo
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer py-1 hover:text-white"
+          onclick="filterCategories('Climbers')"
+        >
+          Climbers
+        </p>
+        <p
+          class="hover:bg-[#15803D] cursor-pointer py-1 hover:text-white"
+          onclick="filterCategories('Aquatic Plants')"
+        >
+          Aquatic Plants
+        </p>
+      </div>
+
+      <!-- item-2 -->
+      <div
+        class="card-container w-full grid grid-cols-3 gap-7 items-center"
+        id="categories-container"
+      >
+        <div id="modal-container"></div>
+        <!-- card-1  -->
+      </div>
+      <div class="your-cart-container w-1/6"></div>
+    </section>
+    <script src="index.js"></script>
   </body>
 </html>
+
+<!-- Open the modal using ID.showModal() method -->
