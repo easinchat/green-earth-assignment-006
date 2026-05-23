@@ -25,11 +25,11 @@ const loadDataCategories = (loadData) => {
             
               src="${data.image}"
               alt="Shoes"
-              class="rounded-xl w-80 h-48 "
+              class="rounded-xl w-full h-48 "
             />
           </figure>
           <div class="card-body">
-            <h2 class="card-title">${data.name}</h2>
+            <h2 class="card-title" onclick="showModal('${data.image}','${data.name}','${data.description}')">${data.name}</h2>
             <p class="text-justify">
               ${data.description}
             </p>
@@ -61,6 +61,15 @@ const filterCategories = (categoryName) => {
 
   loadDataCategories(filteredPlant);
 };
+
+function showModal(image, name, description) {
+  document.getElementById("modal-image").src = image;
+  document.getElementById("modal-title").innerText = name;
+
+  document.getElementById("modal-description").innerText = description;
+
+  document.getElementById("my_modal_5").showModal();
+}
 
 // function showModal() {
 //   const modalContainer = document.getElementById("modal-container");
